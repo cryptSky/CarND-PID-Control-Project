@@ -60,10 +60,7 @@ int main()
           * another PID controller to control the speed!
           */
 
-          // Update error values with cte
           pid.UpdateError(cte);
-          
-          // Calculate steering value (if reasonable error, returns between [-1, 1])
           steer_value = pid.TotalError();
           
           // DEBUG
